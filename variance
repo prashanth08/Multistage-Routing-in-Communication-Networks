@@ -1,0 +1,37 @@
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int main()
+{
+int lower, upper;int a[1000][100];double sum=0; double d1,var;
+cout << "Enter lower: ";
+cin >> lower;
+cout << "Enter upper: ";
+cin >> upper;
+
+if (lower < 0 || upper <= 0 || lower >= upper)
+{
+cout << "Invaid range: [" << lower << ", " << upper << "]\n";
+return 1;
+}
+
+for	(int row = 0; row < 1000; row++)
+{
+for (int colm = 0; colm < 100; colm++)
+{
+int r = lower + rand() % (upper - lower + 1);
+cout << r << "\t";a[row][colm]+=r;sum+=r;
+}
+
+cout << "\n";
+}
+
+cout<<"sum="<<sum<<"\n";d1=(sum/100000);
+cout<<"mean="<<d1<<"\n";
+var=((sum-d1)*(sum-d1))/100000;
+cout<<"variance="<<var<<"\n";
+cout << endl;
+
+return 0;
+}
