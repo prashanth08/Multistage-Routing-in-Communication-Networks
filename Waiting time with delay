@@ -1,0 +1,68 @@
+#include <iostream>
+#include <cstdlib>
+#include <sys/time.h>
+#include <math.h>
+#include <Windows.h>
+#include <time.h>
+#include <ctime>
+using namespace std;
+
+unsigned int
+randr(unsigned int, unsigned int);
+double exponential(double );
+
+int main()
+{
+float a[10000];unsigned int n=0;unsigned int c=0;
+double al,d1,t,sum;double time,end_time;
+float b[11]={0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1};
+cout<<"Enter the value of alpha\n";
+cin>>al;
+clock_t startTime = clock();
+randr(0,10)*0.1;
+while(time<end_time)
+{
+    if(t1<t2)
+    {
+        time=t1;
+        s = s + n * (time-tn); +exponen
+        n++;
+        tn=time;
+        t1=time
+    }
+
+}
+
+for(int i = 0; i < 10000; i++)
+{
+
+    float x=randr(0,10) * 0.1;
+    a[i]=x;
+    sum+=x;
+}
+cout << "\n";
+cout<<"sum="<<sum<<"\n";d1=(sum/10000);
+
+cout <<double( clock() - startTime ) / (double)CLOCKS_PER_SEC<< " seconds." << endl;
+cout << endl;
+
+return 0;
+}
+
+unsigned int randr(unsigned int min, unsigned int max)
+{
+       double scaled = (double)rand()/RAND_MAX;
+
+       return (max - min +1)*scaled + min;
+}
+double exponential(double x)
+{
+
+double z;
+do
+{
+    float z=randr(0,10) * 0.1;
+}
+while((z<0) && (z>1));
+return (-x*log(z));
+}
