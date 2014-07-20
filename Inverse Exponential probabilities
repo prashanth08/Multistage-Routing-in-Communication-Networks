@@ -1,0 +1,50 @@
+#include <iostream>
+#include <cstdlib>
+#include <math.h>
+using namespace std;
+unsigned int randr(unsigned int, unsigned int);
+int main()
+{
+float a[100000];double sum;float al;double d1,var;float b[11]={0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1};
+cout<<"Enter the value of alpha(0.1,0.3,0.5,0.7,1.0):"<<"\n";
+  cin>>al;
+for(float i = 0; i < 10000; i++)
+{
+   double ex;
+
+float x=randr(0,10) * 0.1;
+
+  ex = (-log(1-x))/al;
+    cout << ex << "\t";
+    sum+=ex;
+}
+cout << "\n";
+cout<<"sum="<<sum<<"\n";
+cout<<"mean="<<(1/al)<<"\n";
+var=(1/(al*al));
+cout<<"variance="<<var<<"\n";
+for(int m=0;m<=10;m++)
+{float count=0;
+    for(int n=0;n<=100000;n++)
+    {
+
+        if(b[m]==a[n])
+        {
+            count+=1;
+
+        }
+    }
+     cout<<"P(X<="<<b[m]<<")="<<count/100000<<"\n";
+}
+cout << endl;
+
+return 0;
+}
+
+unsigned int
+randr(unsigned int min, unsigned int max)
+{
+       double scaled = (double)rand()/RAND_MAX;
+
+       return (max - min +1)*scaled + min;
+}
